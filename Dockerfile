@@ -15,15 +15,3 @@ WORKDIR /usr/bin
 RUN ln -s pip3 pip
 
 RUN ln -s python3 python
-
-RUN mkdir -p /opt/oracle
-
-RUN mkdir -p /opt/remote_ecg_server
-
-COPY requirements.txt /opt/remote_ecg_server
-
-ENV PYTHONIOENCODING=utf-8
-
-WORKDIR /opt/remote_ecg_server
-
-RUN pip install -r requirements.txt
